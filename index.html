@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card" role="region" aria-labelledby="login-title">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#60a5fa" />
+                <stop offset="100%" stop-color="#2563eb" />
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#g)" />
+            <path d="M10 17l3.5 3.5L22 12" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h1 id="login-title">Entrar</h1>
+        <p class="subtitle">Acesse sua conta para continuar</p>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+          <p class="field-error" id="email-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <div class="label-row">
+            <label for="password">Senha</label>
+            <a class="link" href="#" id="forgot-link">Esqueci minha senha</a>
+          </div>
+          <div class="password-wrapper">
+            <input type="password" id="password" name="password" autocomplete="current-password" placeholder="mínimo 6 caracteres" minlength="6" required>
+            <button type="button" class="icon-button" id="toggle-password" aria-pressed="false" aria-label="Mostrar senha">
+              <svg class="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8z" fill="currentColor" />
+              </svg>
+              <span class="sr-only">Mostrar senha</span>
+            </button>
+          </div>
+          <p class="field-error" id="password-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <div class="actions">
+          <label class="checkbox">
+            <input type="checkbox" id="remember" name="remember">
+            <span>Lembrar de mim</span>
+          </label>
+        </div>
+
+        <button type="submit" class="button" id="submit-button">Entrar</button>
+      </form>
+
+      <p class="hint">Não tem conta? <a class="link" href="#">Criar conta</a></p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Seu produto</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
